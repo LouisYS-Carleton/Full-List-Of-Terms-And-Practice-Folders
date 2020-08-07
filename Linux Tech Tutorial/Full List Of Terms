@@ -57,13 +57,13 @@ Debugging: The process of fixing broken code.
 
 Branches: 
 
-Merges: Merging the contents of two branches, can replace or combine file(s).
+Merges: 
 
 Blobs: The contents of a file in GIT
 
 Trees: Basically a directory in GIT
 
-Tags: Basically names, or nicknames, for the files in GIT.
+Tags: 
 
 
 --------------------- 
