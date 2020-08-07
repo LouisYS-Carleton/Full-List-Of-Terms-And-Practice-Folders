@@ -1,0 +1,115 @@
+Personal Exam:
+
+w Move forward 1 word:
+b: Move backwards 1 weord
+(x)b: Move backwards x amount of words
+(x)G: Move to x line
+{}: Move for/back a paragraph
+u: Undo
+U: Undo entire line
+dd: Delete entire line
+x: Delete character
+d(x): Delete (insert movement command)
+hjkl: Left, down, up, right
+$: Move to end of line
+^: Move to beginning of line
+G: Move to end of text
+(x)x: Delete x amount of characters
+:set nu: Set numbers for lines
+less: Display navigatable text
+ZZ:Save and quit
+cat: Display text
+:w: Save
+:q!: Quit
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy	
+P: Paste after character
+p: Paste before character
+yw: Copy x amount of words
+:%s/(insert)/(insert): Search and replace
+/(insert): Search
+?/(insert): Search
+n/N(after /()or?()): Navigate results
+(x)*: Find all results with x as first character
+?(x)*:  Find all results with x and second character
+*[x-X]: Find all results between x-X
+*[^x-X]: Find all results excluding x-X
+*.???: Find all results with 3 letter extension
+????: Find all 4 letter results
+[[:upper:]]*: Find uppercase results
+[[:lower:]]*: Find lowercase results
+Ctrl + c: Cancel command
+mv ./../*.??g ./../Images: Move .??g files to Images
+
+
+Permissions
+r: Read 
+w: Write
+x: Execute
+chmod (x+x)(x): Change permissions for user
+U...: User
+G....: Group
+O.....: Owner
+A..: All
+-r--r---wx: File, U&G R, O W&X
+chmod (xx+x)(x)= Change permissions for multiple users
+713(Permissions): all, execute, W/X
+ls -ld: Display permissions for directory only
+
+How many numbers does octal, binary, decimal have?: 8, 1, 10
+
+Root User vs Owner: Superuser, file owner
+
+Filter: A Program that takes contextual data and displays it in a certain way
+
+sudo: Enable superuser permissions
+
+open: Open a file
+
+head(-x)(x): Display text front to back
+
+tail(-x)(x): Display text back to front
+
+sort(-x)(x): Sort results according to command
+
+ctrl a: Move to beginning of line
+
+ctrl e: Move to end of line
+
+** ctrl l: Clear
+
+** ctrl k: Cut
+
+** ctrl y: Copy
+
+nl (-x)(x): Display numbered line
+
+nl -s '(x)' -w (x) (Path): Display numbered lines
+         -s(x): What appears after number
+	 -w(x): What appears before number
+
+** wc (x)(Path): Word count command
+	-w: Words
+	-l: Lines
+	** -m: Characters
+	-mw: Characters and words
+
+** cut -f(x) -d(x) (Path): Sort by column f= column, d= what seperates columns
+
+sed 's/(x)/(x)/g' (Path): Search and replace, g is to search entire text
+
+** uniq (x) (Path): Delete duplicate lines
+
+tac (Path): reverse of cat
+
+egrep: apply a filter
+
+egrep -n: Show line numbers
+      -c: Only show how many lines it is in
+      '2.+': only show results that have 2 as a non final character
+      '2$': Only show results with 2 as final character
+      '^[A-P]': Show all results between A-P
+      '[aeiou]{2,}': Show all results with 2 vowels back to back
+      'or|I|poo': Show all results with or, i, poo in them

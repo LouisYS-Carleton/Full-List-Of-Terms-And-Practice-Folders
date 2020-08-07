@@ -1,0 +1,170 @@
+Personal Exam:
+
+w: Forwards a word
+b: Backwards a word
+(x)b: Backwards x amount of words
+(x)G: Jump to x line
+{}: Jump 1 paragraph
+u:undo
+U: Undo entire line
+dd: Delete entire line
+x: Delete character
+d(x): Delete (insert movement command)
+hjkl: Down, left, right, up
+$: Move to end of line
+^: Move to beginning of line
+G: Jump to end
+(x)x: Delete x amount of characters
+:set nu: Set numbers for lines
+less: Show navigatable file
+ZZ: Save and quit
+cat: Display non navigatable text
+:w: Save without quit
+:q!: Quit without save
+*o: New line (like i, but adds new line)
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy	
+P: Paste after character
+p: Paste before character
+yw: Copy x amount of words
+:%s/(insert)/(insert): Search and replace
+/(insert): Search
+?/(insert): Search from bottom
+n/N(after /()or?()): Navigate search
+(x)*: Find results beginnning with x
+?(x)*: Find results with second letter x
+*[x-X]: Find results between x-X
+*[^x-X]: Find results excluding x-X
+*.???: Find all 3 letter extensions
+????: Find all 4 letter words
+[[:upper:]]*: Find all uppercase results
+[[:lower:]]*: Find all lowercase results
+Ctrl + c: Cancel
+mv ./../*.??g ./../Images: Move all .??g files to images
+top: 
+ps: Show all processes
+ps aux: Show all urrently running processes
+
+Permissions
+r: Read
+w: Write
+x: Execute
+chmod (x+x)(x): Change permissions
+U...: User
+G....: Groups
+O.....: Others
+A..: All
+dr-xr-x-wx: Directory, user= r/x, Group= r/x, Others= w/x
+chmod (xx+x)(x)= Change multiple user permissions
+727(Permissions): All, w, all
+ls -ld: List directories permissions
+
+How many numbers does octal, binary, decimal have?: 1, 8, 10
+
+Root User vs Owner: Root= Sysadmin, Owner= Files owner/creator
+
+Filter: A program that text ontextual data and displays it in a certain way
+
+sudo: Superuser command
+
+open: Open a file
+
+** head(-x)(x): Display first 10 lines, unless specified, of a file.
+
+** tail(-x)(x): Display last 10 lines, unless specified, of a file
+
+sort(-x)(x): Sort a file accordingly
+
+ctrl a: Move to beginning of command line
+
+ctrl e: Move to end of command line
+
+** ctrl l: Clear
+
+** ctrl k: Cut
+
+** ctrl y: Paste
+
+nl (-x)(x): Number lines of file
+
+nl -s '(x)' -w (x) (Path): Number lines of a file
+         -s(x): What comes after number
+	 -w(x): What comes before
+
+** wc (x)(Path):
+	-w: words
+	-l: Lines
+	** -m: Characters
+	-mw: Characters and words
+
+** cut -f(x) -d(x) (Path): Isolate specified columns. f=which column, d= spacing between columns
+
+sed 's/(x)/(x)/g' (Path): Search and replace
+	-s: Search
+	X: Find
+	x: Replace
+	-d: Look through entire file
+
+** uniq (x) (Path): Delete duplicate lines
+
+tac (Path): Reverse of cat
+
+** egrep: Filter command
+
+** egrep -n: Which lines have results, with numbers
+      -c: How many lines have result
+      '2.+': Files that have 2 as a non final character
+      '2$': Files that have 2 as final character
+      '^[A-P]': Files between A-P
+      '[aeiou]{2,}': Files that have 2 vowels in a row
+      'or|I|poo': Files with or, I, poo
+
+** egrep:
+.: single character
+?: 0 or 1 times
+*: 0 or more time matched
++: 1 or more times matched
+{n}: find results that contain (n)
+{n,m}: Find results that contain ( n, m
+[agd]: Find results with a, g, d
+[^agd]: Find results excluding a, g, d
+[c-f]: Find results between c-f
+(): Isolate as an expression
+|: Or
+^: Beginning
+$: End
+
+STDIN: Input
+STDOUT: Output
+STDERR: Error
+
+Which of the following tells output to save to a file instead of being printed?: =,^,<,>,-= >
+
+Command line to duplicate your Full Tutorial... file?: ~/L/Full > (x)/New
+
+>: Move from program to text
+>>: Copy onto new text, not over
+<: Move from text to program
+2>: Forward all error messages to file
+
+** command line to put together the text of two files, but only display the results of the newly compiled file?:
+
+Command to forward error messages to file?: x/l/P 2> x/x/Errors
+
+Command to get last 7 lines in Full...?: tail -7 (x) 
+
+Command to get only second last result in Linux...?: head | tail -7 (x)
+
+Identify all files in your home directory which the group has write permission for.:  
+
+Create a listing of every user which owns a file in a given directory as well as how many files and directories they own.: 
+
+How to kill a program?: kill
+
+Command to move background processes into foreground?: fg (job number)
+
+Command to view list of background jobs?: job
+
+Command to move foreground processes into background?: ctrl z

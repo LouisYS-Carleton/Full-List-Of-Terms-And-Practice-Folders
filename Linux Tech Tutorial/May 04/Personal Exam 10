@@ -1,0 +1,150 @@
+Personal Exam:
+
+w: Forward
+b: Backwards
+(x)b: Back x amount of words
+(x)G: Go to x line	
+{}: Move forward/backwards 1 paragraph
+u: undo
+U: Undo entire line
+dd: Delete entire line
+x: Delete character
+d(x): Delete (insert movement command)
+hjkl: Left, down, up, right
+$: Move to end of line
+^: Move to beginning of line
+G: Move to end of text
+(x)x: Delete x amount of characters
+:set nu: Set numbers for the lines
+less: Show a navigatable text file
+ZZ: Save and quit
+cat: Non navigatable text display
+:w: Save without quitting
+:q!: Quit without saving
+*o: Similar to i, but creates a new line as well.
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy	
+P: Paste after character
+p: Paste before character
+yw: Copy x amount of words
+:%s/(insert)/(insert): Search and replace
+/(insert): Search
+?/(insert): Search from bottom up
+n/N(after /()or?()): Navigate through searches
+(x)*: Find results beginning with x
+?(x)*: Find results with second letter x
+*[x-X]: Find results between x-X
+*[^x-X]: Find results excluding x-X
+*.???: Find results with 3 letter extension
+????: Find four letter results
+[[:upper:]]*: Find uppercase results
+[[:lower:]]*: Find lowercase results
+Ctrl + c: Universal cancel command in linux
+mv ./../*.??g ./../Images: Move all .??g files to Images directory
+
+
+Permissions
+r: Read
+w: Write
+x: Execute
+chmod (x+x)(x): Change user permissions
+U...: User
+G....: Group
+O.....: Others
+A..: All
+dr-xr-x-wx: Directory, r/x,r/x,w/x
+chmod (xx+x)(x)= Change multiple user permissions
+727(Permissions): All, w, all
+ls -ld: list directory permissions
+
+How many numbers does octal, binary, decimal have?: 8, 1, 10
+
+Root User vs Owner: Root= owner of computer, owner= owner of files
+
+Filter: A program that takes contextual data and presents it in defined way.
+
+sudo: Enable superuser commands
+
+open: Open the file
+
+** head(-x)(x): Displays first x amount of entries from selected text file
+
+** tail(-x)(x): Same as head, but from the bottom. Automatically displays 10 unless specified
+
+sort(-x)(x): Sort text results, can use man to specify how it sorts.
+
+ctrl a: Move to beginning of command line
+
+ctrl e: Move to end of command line
+
+** ctrl l: Clear
+
+** ctrl k: Cut
+
+** ctrl y: Paste
+
+nl (-x)(x): Number lines of text file
+
+nl -s '(x)' -w (x) (Path): Number lines of text
+         -s(x): What appears after numbers
+	 -w(x): what appears before 
+
+** wc (x)(Path): Word count
+	-w: words
+	-l: lines
+	** -m: characters
+	-mw: words/characters
+
+** cut -f(x) -d(x) (Path): Used if text is in columns. -f:which column, -d:space between columns
+
+sed 's/(x)/(x)/g' (Path): Search and replace
+	-s: search
+	X: Find
+	x: replace
+	-d: search through entire text
+
+** uniq (x) (Path): Delete duplicate lines
+
+tac (Path): Reverse of cat
+
+** egrep: Filter command
+
+** egrep -n: Show line numbers as well for results
+      -c: Show how many lines have results
+      '2.+': Find results that have 2 as a non final character
+      '2$': Find results with 2 as their final character
+      '^[A-P]': Find results between a-p
+      '[aeiou]{2,}': Find results that have 2 vowels next to each other
+      'or|I|poo': Find results that have or, i, poo
+
+egrep:
+.: Means there are subsequent characters
+?: Unknown character
+*: Find results according to what follows this
++: One or more characters after this
+{n}: Find results with n
+{n,m}: find results with n, m
+[agd]: find results with agd
+[^agd]: find results without agd
+[c-f]: find results between c-f
+(): Isolated variable in command line
+|: "and/or"
+^: Beginning of line
+$: End of line
+
+STDIN: Input, information that the program gets
+STDOUT: Output, information that the program puts out
+STDERR: Error message, returns if something doesn't add up
+
+Which of the following tells output to save to a file instead of being printed?: =,^,<,>,- : >
+
+Command line to duplicate your Full Tutorial... file?: cat ~/Desktop/Li../Full.. > Full list BACKUP
+
+>: Replace file location
+>>: Add to file in location
+<: Insert file into output, ie put text from file into a program
+
+command line to put together the text of two files, but only display the results of the newly compiled file?: cat 
+

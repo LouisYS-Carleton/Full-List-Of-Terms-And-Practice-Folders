@@ -1,0 +1,66 @@
+Personal Exam:
+
+w:
+b: 
+(x)b:
+(x)G:
+{}:
+u:
+U:
+dd:
+x:
+d(x):
+hjkl:
+$: 
+^:
+G:
+(x)x:
+:set nu:
+less:
+ZZ: 
+cat:
+:w:
+:q!:
+v:
+V:
+d(after v):
+y(after v):	
+P:
+p:
+yw:
+:%s/(insert)/(insert):
+/(insert): 
+?/(insert):
+n/N(after /()or?()):
+(x)*: 
+?(x)*: 
+*[x-X]:
+*[^x-X]:
+*.???:
+????:
+[[:upper:]]*:
+[[:lower:]]*:
+Ctrl + c:
+mv ./../*.??g ./../Images:
+
+
+Permissions
+r: 
+w:
+x:
+chmod (x+x)(x):
+Ow...: 
+Gr...:
+Ot....:
+A..:
+drwxr-xr-x:
+chmod (xx+x)(x)=
+mv ./../*.??g ./../Images:
+723(Permissions): 
+
+
+How many numbers does octal, binary, decimal have?:
+
+Root User vs Owner: 
+
+

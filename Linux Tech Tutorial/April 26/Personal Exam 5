@@ -1,0 +1,65 @@
+Personal Exam:
+
+w: Move forward 1 word
+b: Move backwards 1 word
+(x)b: Move backwards x amount of words
+(x)G: Move to (x) line
+{}: Move forward, backwards 1 paragraph
+u: Undo
+U: Undo entire line
+dd: Delete entire line
+x: Delete a character
+d(x): Delete (insert movement command)
+hjkl: Move left, down, up, right
+$: Move to end of line
+^: Move to beginning of line
+G: Move to end of text
+(x)x: Delete x amount of characters
+:set nu: Set numbers for text file lines
+less: Show navigatable text file
+ZZ: Save and quit
+cat: Display text file (Non-Navigatable)
+:w: Save and don't quit
+:q!: Quit and don't save
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy	
+P: Paste after character
+p: Paste before character
+yw: Copy (x) amount of words
+:%s/(insert)/(insert): Search and replace (Search/replace)
+/(insert): Search
+?/(insert): Search
+n/N(after /()or?()): Navigate search
+(x)*: Find all results starting with (x)
+?(x)*: Find all results with second letter (x)
+*[x-X]: Find all results between (x-X)
+*[^x-X]: Find all results excluding (x-X)
+*.???: Find all extensions with 3 letters
+????: Find all 4 letter results
+[[:upper:]]*: FInd all results starting with an uppercase
+[[:lower:]]*: Find all results starting with a lowercase
+Ctrl + c: Universal sign for cancel  in linux
+mv ./../*.??g ./../Images:Move all files that end with .??g (ie mpg, jpg) to Images
+
+
+Permissions
+r: Read a file
+w: Write a file
+x: Execute a directory or program
+chmod (x+x)(x): Change Permissions. chmod o+w [path]
+Us..: User
+Gr...: Group
+Ot....: Others
+A..: All
+drwxr-xr-x: Directory, U=All, G=no Write, O= no Write
+chmod (xx+x)(x)= Change permissions for multiple users. 
+723(Permissions): U=All, G=Write, O=W&E
+
+
+How many numbers does octal, binary, decimal have?: 8 Octal, 1 Binary, 10 Decimal
+
+Root User vs Owner: Root user has control over files and directories made by him\her, Root user has full manipulation over system.
+
+

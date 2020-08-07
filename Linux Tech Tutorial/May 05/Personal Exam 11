@@ -1,0 +1,151 @@
+Personal Exam:
+
+w: 1 W
+b: Back 1W
+(x)b: Go back x words
+(x)G: Move to x line
+{}: Forward 1 para
+u: undo
+U: Undo entire line
+dd: Delete entire line
+x: Delete character
+d(x): Delete (insert movement command)
+hjkl: Left, down, up, right
+$: End of line
+^: Start of line
+G: End of text
+(x)x: Delete x amount of characters
+:set nu: Set numbers for the lines
+less: Show navigatable file
+ZZ: Save and quit
+cat: display text
+:w: Save
+:q!: Quit
+*o: New line, same as i
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy	
+P: Paste after
+p: before
+yw: Copy x amount of words
+:%s/(insert)/(insert): Search and find
+/(insert):  Search
+?/(insert): Search bottom
+n/N(after /()or?()): Navigate
+(x)*: Starts with x
+?(x)*: second letter x
+*[x-X]: Between x-X
+*[^x-X]:excluding x-X
+*.???: results with 3 letter extension
+????: Four letter results
+[[:upper:]]*: Uppercase results
+[[:lower:]]*: Lowercase results
+Ctrl + c: Cancel
+mv ./../*.??g ./../Images: Move .??g files to Images
+
+
+Permissions
+r: Read
+w: Write
+x: Execute
+chmod (x+x)(x): Change permissions
+U...: User
+G....: Group
+O.....: Others
+A..: All
+dr-xr-x-wx: Directory, r&x, r&x, w&x
+chmod (xx+x)(x)= Change oermissions for multiple users
+727(Permissions): all, w, all
+ls -ld:show directories permissions
+
+How many numbers does octal, binary, decimal have?: 8, 1, 10
+
+Root User vs Owner: Root is owner of comp, owner is owner of file
+
+Filter: A program that can be applied to sort results in certain way
+
+sudo: Enable superuser commands
+
+open: Open file
+
+** head(-x)(x): Display first 10 (unless specified in (x)) results
+
+** tail(-x)(x): Display last 10 results
+
+sort(-x)(x): Sort results accordingly
+
+ctrl a: move to beginning of command line
+
+ctrl e: Move to end of command line
+
+** ctrl l: Clear command line
+
+** ctrl k: Cut command line
+
+** ctrl y: Copy command line
+
+nl (-x)(x): Number results
+
+** nl -s '(x)' -w (x) (Path):
+         -s(x): What shows after number
+	 -w(x): What shows before
+
+** wc (x)(Path): Wordcount command
+	-w: Words
+	-l: Lines
+	** -m: Characters
+	-mw: Words and characters
+
+** cut -f(x) -d(x) (Path): Divide file by columns. -f= column, -d= space between columns
+
+sed 's/(x)/(x)/g' (Path): Search and replace
+	-s:Search
+	X:Find
+	x:Replace
+	-g:Look through entire text
+
+** uniq (x) (Path): Delete duplicate lines
+
+tac (Path): Reverse of cat
+
+** egrep: filter command
+
+** egrep -n: Show lines&number of line
+      -c: Show how many lines has results
+      '2.+': Show results with 2 as non final character
+      '2$': Show results with 2 as final character
+      '^[A-P]': Find results between A-P
+      '[aeiou]{2,}': Find results with 2 or more vowels in a row
+      'or|I|poo': Or, I, Poo in the results
+
+egrep:
+.: A single character
+?: Character matches 1 or 0 times only
+*: Character matches 0 or more times
++: Character matches 1 or more times
+{n}: preceding character matches exactly {n} times
+{n,m}: Preceding character matches exactly n or m times
+[agd]: Character is one or more of those in brackets
+[^agd]: Character is none of those in brackets
+[c-f]: Character is between c-f
+(): Allows grouping of multiple characters, acts as 1.
+|: "Or"
+^: Beginning of line
+$: End of line
+
+STDIN: Input
+STDOUT: Output
+STDERR: Error messages
+
+Which of the following tells output to save to a file instead of being printed?: =,^,<,>,-: >
+
+Command line to duplicate your Full Tutorial... file?: cat Full... > BACKUP 3
+
+>: Copy over existing file, or create a new one.
+>>: Copy on top of existing file
+<: Copy from file to program.
+
+command line to put together the text of two files, but only display the results of the newly compiled file?: 
+
+

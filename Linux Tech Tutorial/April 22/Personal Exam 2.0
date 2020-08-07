@@ -1,0 +1,35 @@
+Personal Exam:
+
+w: Next word
+(x)w:x amount of words forward
+b: back a word
+(x)b:back x amount of words
+(x)G:Move to x line
+{}:for/back a paragraph
+u:undo
+U:Undo entire line
+dd:delete entire line
+x: delete character
+d(x): delete (insert movement command)
+hjkl: left, down, up, right
+$:MOve to end of line
+^:Move to beginning of line
+G:Move to end of text
+(x)x:Delete x amount of characters
+:set nu:display numbers on lines
+less:Show text in long form, navigatable
+ZZ:Close text editor with save
+cat:display file text
+:w:Save without quitting
+:q!:Quit without saving
+v:Select Characters
+V:Select entire line
+d(after v): Cut
+y(after v): Copy
+P: Paste before word
+p: Paste after word
+yw: copy until next word
+:%s/(insert)/(insert): Search and replace (first insert is search/second insert is replace)
+/(insert): Search
+n/N(after /()or?()):Move forwards or backwards through selections.
+

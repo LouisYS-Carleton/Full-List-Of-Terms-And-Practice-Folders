@@ -1,0 +1,16 @@
+1st line Test text, deleted previous. Be careful with dd. Remember to exit i before starting movement commands, and vice versa. Enter starts a new line, it doesn't just correspond with what looks like a "line of text". Used $ o move to the end of the line, ^ to move to the beginning.
+
+3rd line 
+
+
+6th line Enter to space lines
+
+
+9th line
+
+11th line
+
+
+w: word forward
+b: word backwards
+put number in front of either to move x amount of letters

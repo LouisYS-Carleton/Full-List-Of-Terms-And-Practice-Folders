@@ -1,0 +1,43 @@
+Personal Exam:
+
+w: Move forward a word
+(x)w: Move forward (x) number of words
+b: Move back a word
+(x)b: Move back (x) number of words
+(x)G: Jump to (x) line
+{}: Move forward backwards a paragraph
+u: Undo
+U: Undo entire line
+dd: Delete entire line
+x: delete character
+d(x): Delete (insert movement command)
+hjkl: left, down, up, right
+$: Move to end of line
+^: Move to beginning of line
+G: Move to end of text
+(x)x: Delete (x) amount of characters
+:set nu: Set numbers for lines
+less: Show long navigatable text
+ZZ: Save and quit
+cat: Show non navigatible text
+:w: Save without quitting
+:q!: Quit without saving
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy
+P: Paste before character
+p: Paste after character
+yw: Copy x amount of words
+:%s/(insert)/(insert): Search and replace (search/replace)
+/(insert): Search
+?/(insert): Search
+n/N(after /()or?()): Navigate
+(x)*: Find results that start with (x)
+?(x)*: Find results that have second letter (x)
+[x-X]: Find results between (x-X)
+[^x-X]: Find results excluding (x-X)
+.???*: Find results ending with file type that has 3 char.
+????: Find four letter results
+[[:upper:]]*: Search files for uppercase
+[[:lower:]]*: Search files for lowercase

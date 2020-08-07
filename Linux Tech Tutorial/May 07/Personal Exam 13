@@ -1,0 +1,170 @@
+Personal Exam:
+
+w:
+b: 
+(x)b:
+(x)G:
+{}:
+u:
+U:
+dd:
+x:
+d(x):
+hjkl:
+$: 
+^:
+G:
+(x)x:
+:set nu:
+less:
+ZZ: 
+cat:
+:w:
+:q!:
+* o:
+v:
+V:
+d(after v):
+y(after v):	
+P:
+p:
+yw:
+:%s/(insert)/(insert):
+/(insert): 
+?/(insert):
+n/N(after /()or?()):
+(x)*: 
+?(x)*: 
+*[x-X]:
+*[^x-X]:
+*.???:
+????:
+[[:upper:]]*:
+[[:lower:]]*:
+Ctrl + c:
+mv ./../*.??g ./../Images:
+* top:
+* ps:
+* ps aux:
+
+Permissions
+r: 
+w:
+x:
+chmod (x+x)(x):
+U...: 
+G....:
+O.....:
+A..:
+dr-xr-x-wx:
+chmod (xx+x)(x)=
+727(Permissions): 
+ls -ld:
+
+How many numbers does octal, binary, decimal have?:
+
+Root User vs Owner: 
+
+Filter:
+
+sudo:
+
+open:
+
+** head(-x)(x):
+
+** tail(-x)(x):
+
+sort(-x)(x):
+
+ctrl a:
+
+ctrl e:
+
+** ctrl l:
+
+** ctrl k:
+
+** ctrl y:
+
+nl (-x)(x):
+
+nl -s '(x)' -w (x) (Path):
+         -s(x):
+	 -w(x):
+
+** wc (x)(Path):
+	-w:
+	-l:
+	** -m:
+	-mw:
+
+** cut -f(x) -d(x) (Path):
+
+sed 's/(x)/(x)/g' (Path): 
+	-s:
+	X:
+	x:
+	-d:
+
+** uniq (x) (Path):
+
+tac (Path):
+
+** egrep: 
+
+** egrep -n:
+      -c:
+      '2.+':
+      '2$':
+      '^[A-P]':
+      '[aeiou]{2,}':
+      'or|I|poo':
+
+** egrep:
+.:
+* ?:
+* *:
++:
+{n}:
+{n,m}:
+[agd]:
+[^agd]:
+[c-f]:
+():
+|:
+^:
+$:
+
+STDIN:
+STDOUT:
+STDERR:
+
+Which of the following tells output to save to a file instead of being printed?: =,^,<,>,-
+
+Command line to duplicate your Full Tutorial... file?:
+
+>:
+>>:
+<:
+2>:
+
+** command line to put together the text of two files, but only display the results of the newly compiled file?:
+
+Command to forward error messages to file?: 
+
+Command to get last 7 lines in Full...?:
+
+Command to get only second last result in Linux...?:
+
+Identify all files in your home directory which the group has write permission for.: 
+
+Create a listing of every user which owns a file in a given directory as well as how many files and directories they own.: 
+
+How to kill a program?: 
+
+* Command to move background processes into foreground?:
+
+* Command to view list of background jobs?:
+
+* Command to move foreground processes into background?:

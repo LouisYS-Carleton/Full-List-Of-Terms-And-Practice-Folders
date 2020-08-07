@@ -1,0 +1,105 @@
+Personal Exam:
+
+w: Move forward one word
+b: Move backwards 1 word
+(x)b: Move backwards x amount of words
+(x)G: Move to x line
+{}: Move forward/backwards a paragraph
+u: Undo
+U: Undo entire line
+dd: Delete entire line
+x: Delete character
+d(x): Delete (insert movement command)
+hjkl: Left, down, up, right
+$: Move to end of line
+^: Move to beginning of line
+G: Move to end of text 
+(x)x: Delete x amount of characters
+:set nu: Set numbers for text file lines
+less: Show navigatable text
+ZZ: Save and quit
+cat: Show text, non navigatable
+:w: Save
+:q!: Quit, no save
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy	
+P: Paste after character
+p: Paste before character
+yw: Select x amount of words
+:%s/(insert)/(insert): Search and replace
+/(insert): Search
+?/(insert): Search
+n/N(after /()or?()): Navigate search results
+(x)*: Search for all results starting with (x)
+?(x)*: Search for all results with second letter (x)
+*[x-X]: Search for all results between x and X
+*[^x-X]: Search for all results excluding x-X
+*.???: Find all 3 letter extensions
+????: Find all 4 letter results
+[[:upper:]]*: Find uppercase
+[[:lower:]]*: Find lowercase
+Ctrl + c: Cancel
+mv ./../*.??g ./../Images: Move all .??g files to Images
+
+
+Permissions
+r: Read
+w: Write
+x: Execute
+chmod (x+x)(x): Change permissions for file
+U...: User
+G....: Group
+O.....: Others
+A..: All
+--w-rwx--x: File, W=User, All=Group, Execute= Others
+chmod (xx+x)(x)= Change multiple users' permissions
+026(Permissions): U=None, G= Write, O= Read, Write
+ls -ld: Show permissions for directory alone
+
+How many numbers does octal, binary, decimal have?: 8, 1, 10
+
+Root User vs Owner: Root user can change all files, owner can change what he/she creates
+
+Filter: A program that takes data and presents it in a certain way.
+
+sudo: Enable superuser commands
+
+open: Open file, program
+
+head(-x)(x): Display text, front to back. Can be manipulated
+
+tail(-x)(x): Display text, back to front. Can be manipulated
+
+sort(-x)(x): Sort results in certain way. ie by name, size, etc
+
+ctrl a: Move to beginning of command
+
+ctrl e: Move to end of command
+
+ctrl l: Clear
+
+ctrl k: Cut line
+
+ctrl y: Paste line
+
+nl (-x)(x): Number lines displayed in text
+
+nl -s '(x)' -w (x) (Path): Number lines displayed in text
+         -s(x): What show after number
+	 -w(x): Space before
+
+wc (x)(Path): Word count command
+	-w: Words
+	-l: Lines
+	-m: Characters
+	-mw: Characters and words
+
+cut -f(x) -d(x) (Path): Seperate into columns (f=which column, d=what appears between columns
+
+sed 's/(x)/(x)/g' (Path): Search and replace. "g"= Search entire text, not just until first word found
+
+uniq (x) (Path): Delete duplicate lines in the data. Only works if side by side.
+
+tac (Path): Display text, back to front

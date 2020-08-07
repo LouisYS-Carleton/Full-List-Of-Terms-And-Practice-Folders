@@ -1,0 +1,67 @@
+Personal Exam:
+
+w: Move forward 1 word
+(x)w: Move forward x amount of words
+b: Move back 1 word
+(x)b: Move back x amount of words
+(x)G: Move to x line
+{}: For/back a paragraph
+u: Undo
+U: Undo entire line
+dd: Delete entire line
+x: delete character
+d(x): Delete (insert movement command)
+hjkl: left, down, up, right
+$: End of line
+^: Beginning of line
+G: End of text
+(x)x: (x) amount of character delete
+:set nu: Set numbers for text editor
+less: Display long form text
+ZZ: Full save and quit
+cat: Display non navigatible text example
+:w: Save and dont quit
+:q!: Quit without saving
+v: Select certain characters
+V: Select full line
+d(after v): Cut
+y(after v): Copy	
+P: Paste before character
+p: Paste after character
+yw: Copy x amount of words
+:%s/(insert)/(insert): Search and find
+/(insert): Search
+?/(insert): Search
+n/N(after /()or?()): Seek through results
+(x)*: Find all results starting with (x)
+?(x)*: Find all results with second letter (x)
+*[x-X]: Find all results between [x-X]
+*[^x-X]: Find all results excluding [x-X]
+*.???: Find all results ending in 3 letter extension
+????: Find all 4 letter results
+[[:upper:]]*: Find all uppercase results
+[[:lower:]]*: Find all lowercase results
+Ctrl + c: Universal cancel
+mv ./../*.??g ./../Images: Move all results ending in .??g to Images
+
+
+Permissions
+r: Read
+w: Write
+x: Execute
+chmod (x+x)(x): Change permissions (person)(file path)
+Ow...: Owner
+Gr...: Group
+Ot....: Others
+A..: All
+drwxr-xr-x: d= Directory, rwx= all granted(owner), r-x= No write(Groups), r-x=No write(others)
+chmod (xx+x)(x)= Change permissions (persons)(file)
+mv ./../*.??g ./../Images:
+723(Permissions): rwx, -w-, -wx 
+
+
+How many numbers does octal, binary, decimal have?: Octal 8, Binary 1, Decimal 9
+
+Root User vs Owner: Root User is master of computer, Owner is master of files and dir made by him/her.
+
+

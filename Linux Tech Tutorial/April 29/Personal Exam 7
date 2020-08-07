@@ -1,0 +1,105 @@
+Personal Exam:
+
+w: Move forward 1 word
+b: Move backwards 1 word
+(x)b: Move backwards x amount of words
+(x)G: Move to x line
+{}: Move forward or backwards a paragraph
+u: Undo
+U: Undo entire line
+dd: Delete entire line
+x: Delete character
+d(x): Delete (insert command)
+hjkl: Left, Down, Up, Left
+$: Go to end of line
+^: Go to beginning of line
+G: Go to end of text
+(x)x: Delete x amount of characterz
+:set nu: Set numbers for file
+less: Navigatable text file
+ZZ: Save and quit
+cat: Display text
+:w: Save
+:q!: Quit without saving
+v: Select
+V: Select entire line
+d(after v): Cut
+y(after v): Copy	
+P: Paste after character
+p: Paste before character
+yw: Copy x amount of words
+:%s/(insert)/(insert): Search and replace
+/(insert): Search
+?/(insert): Search
+n/N(after /()or?()): Search through searches
+(x)*: Find all results that start with x
+?(x)*: Find all results with second letter x 
+*[x-X]: Find results between x and X
+*[^x-X]: Find results excluding x-X
+*.???: Find all 3 letter extension files
+????: Find all 4 letter words
+[[:upper:]]*: Find all uppercase files
+[[:lower:]]*: Find all lowercase files
+Ctrl + c: Cancel
+mv ./../*.??g ./../Images: Move .??g files to Images
+
+
+Permissions
+r: Read
+w: Write
+x: Execute
+chmod (x+x)(x): Change permissions
+U...:  User
+G....: Group
+O.....: Owner
+A..: All
+--w-rwx--x: File, O=w, G=All, O=x
+chmod (xx+x)(x)= Change multiple users' permissions
+026(Permissions): o=0, G= w, O= r&w
+ls -ld: Show directories permissions only
+
+How many numbers does octal, binary, decimal have?: 8, 1, 10
+
+Root User vs Owner: Root user can manipulate entire computer, owner can change files created by him/her
+
+Filter: Program that takes data and displays it in a certain way
+
+sudo: Superuser abilities
+
+open:Open file
+
+head(-x)(x): Display text from top down
+
+tail(-x)(x): Display text from bottom up
+
+sort(-x)(x): Sort data in partucular way
+
+ctrl a: Move to beginning of command
+
+ctrl e: Move to end of command
+
+ctrl l: Clear
+
+ctrl k: Cut line
+
+ctrl y: Paste line
+
+nl (-x)(x): Number lines of file
+
+nl -s '(x)' -w (x) (Path): Number lines of file
+         -s(x): What appears after number
+	 -w(x): What appears before number
+
+wc (x)(Path): Word count
+	-w: Words
+	-l: Lines
+	-m: Characters
+	-mw: Words and characters
+
+cut -f(x) -d(x) (Path): Display columns. -f= column, -d= What appears between columns
+
+sed 's/(x)/(x)/g' (Path): Search and replace, g is to say "look through entire file"
+
+uniq (x) (Path): Delete duplicate lines (only if next to each other)
+
+tac (Path): Cat, but reversd

@@ -1,0 +1,782 @@
+										
+													STUDYING
+
+
+
+-------------------
+				---INDEX (ROUGH, NOT EXACT)---
+
+
+Movement Shortcuts: 38
+General Terms: 52
+EGREP: 130
+Text File Manipulation: 170
+Shortcuts for LS: 207
+VI: 233
+Permissions: 298
+Octal Table: 360
+Piping And Redirection: 385
+GIT: 421
+HTML: 446
+CSS: 483
+CSS CODE: 503
+JAVA: 537
+Style Object Properties (JAVA): 549
+Programming Logic: 612
+Debugging: 661
+
+
+--------------------
+ 
+Directory: Folder, series of folders
+
+Absolute path: a file or directory in relation to the root of the file system
+
+Relative path: A file or directory corresponding to the current location
+
+/etc: List of system files, good to mess around with for searching tests.
+
+Root User: Full control over entire system. "superuser"
+
+Owner: Person who made file or directory.
+
+Filter: Takes data in whatever context given, displaying it in a certain way.
+
+Forking: Making a copy of somebody else's repo into your account.
+
+Cloning: When you make a copy of somebody else's repo onto your local computer.
+
+CSS:"Cascading Style Sheets". Style sheet language used for describing the presentation of a webpage.
+
+Javascript: A high level, dynamic programming language.This alongside CSS are two of the core technologies that shape our web experience.
+
+Scratch: A programming language that lets you create your own interactive stories,
+games, music, and art.                             
+
+Debugging: The process of fixing broken code.
+
+Branches: 
+
+Merges: Merging the contents of two branches, can replace or combine file(s).
+
+Blobs: The contents of a file in GIT
+
+Trees: Basically a directory in GIT
+
+Tags: Basically names, or nicknames, for the files in GIT.
+
+
+--------------------- 
+---------------------
+			      ---MOVEMENT SHORTCUTS---
+
+ctrl a: Move to beginning of command line.
+
+ctrl e: Move to end of command line.
+
+ctrl l: Clear screen (Also can say "clear")
+
+ctrl -: Undo
+
+ctrl k: Cut until end of line.
+
+ctrl y: Paste
+
+---------------------
+				---GENERAL TERMS---
+
+cd ..: Move back one directory.
+
+top: List of programs/processes that are currently running.
+
+ps: List of processes running in terminal
+
+ps aux: List of processes for entire system. Use grep (See EGREP).
+	- Can be used to find process ID. "grep" search a file (ie grep 'Safari') it will be # next to user.
+
+kill [signal] <Process ID>: Used to kill a program. (ignore brackets and stuff)
+	- [signal]: A way of placing importance of the task, in a way. Can (and should) be run without 
+	anything here, however if the program still won't close imput a -9. This'll shut shit down.
+
+	- <Process ID>: Can be found next to username after ps aux is used.
+
+job: List current jobs running in background
+
+fg <job number>: Move a background process to the foreground.
+
+ctrl + z: Move a foreground process to the background (pauses process in the meantime).
+
+Pwd: Current location (User profile)
+
+Ls: list of what’s there (folders, etc)
+
+Cd: Change directory (current directory)
+
+File [File name (direct to file through directories): Shows type (jpeg, mp4, etc) a file is. Linux does not show this.
+
+Man: USEFUL feature to help keep track of what shortcuts can do. Use when specific desired action is unknown.
+
+Mkdir: Make a directory 
+     - -p: Make parent directories as needed     
+     - -v: Displays what happened with mkdir    
+
+Rmdir: Remove a directory
+     - -p Removes all EMPTY directories in path *DANGER*
+
+Rm: Remove file *DANGER*
+     - -r Remove directory containing files.
+     - -i Always use with -r, Gives option to review files 
+
+Touch: While in cd, can be used to create blank document
+
+Cp: Copy file. (cp [Directory path] [Original] [New]) (MAN)
+     - -p: Copy entire file, time and all
+
+Mv: Move a file, can also change file name upon move.
+     - Mv can also be used to rename file, select same original dir.
+
+Cat: View the file, used to join files together at a mode advanced level. If used with no file will just mirror text input that follows, use CTRL + C to get out of this.
+
+Tac: Reverse cat search. Displays results last to first.
+
+Less: Similar to cat, but better for long strings of text as you can scroll through. Spacebar goes up a page, b goes back       a page. Q to quit (or ZZ).
+
+Ctrl + C: Cancel (Universal for linux)
+
+Chmod: Change permissions for a file or folder.
+    - Follow with (Person to change permissions for)(File's path) **Exclude brackets**
+		eg. chmod a+w ~/Desktop/Linux\ Tech\ Tutorial/ Full\ List\ Of\ Terms
+
+sudo: Enable "superuser" priviledges. Can be used to look at root user files. *DANGER*
+
+open: Open a file.
+
+code: Allows code to be opened in VS Code directly from terminal.
+
+pbcopy: Copy a file's contents to clipboard | Should be used with < (copy to symbol, for copy to clipboard)
+
+pbpaste: Paste contents of clipboard | Should be used with < or > (copy to or from clipboard)
+
+history: Shows history of terms.
+
+--------------------
+
+ 				---EGREP---
+
+EGREP: ONLY PRINTS LINES WITH SPECIFIED PARAMETERS. CHECK MAN PAGE
+egrep [command line option] 'x' [Path]
+
+
+. (dot) - a single character.
+? - the preceding character matches 0 or 1 times only.
+* - the preceding character matches 0 or more times.
++ - the preceding character matches 1 or more times.
+{n} - the preceding character matches exactly n times.
+{n,m} - the preceding character matches at least n times and not more than m times.
+[agd] - the character is one of those included within the square brackets.
+[^agd] - the character is not one of those included within the square brackets.
+[c-f] - the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.
+() - allows us to group several characters to behave as one.
+| (pipe symbol) - the logical OR operation.
+^ - matches the beginning of the line.
+$ - matches the end of the line.
+
+
+
+egrep -n= Display which line they're on
+
+egrep -c= Only displays how many lines contain it.
+https://www.debuggex.com/ :   Help source!
+
+Any line with 2 as the non final character: egrep '2.+' [Path]
+
+Any line with 2 as final character: egrep '2$' [Path]
+
+Each line with I, go, now: egrep 'I|go|now' [Path]
+
+Every result between Q-Z: egrep '^[Q-Z]' [Path]
+
+Every result with 2 or more vowels: egrep '[aeiou]{2,}'  ----> {2,} Is saying how many vowels it 
+                                    must contain in a row.
+
+
+
+
+--------------------
+		              ---TEXT FILE MANIPULATION---
+
+
+head (-number of lines to print)(Path): Dsiplay (x) text lines from beginning, can be manipulated. 
+    - ie: head -3 ~/Desktop/Linux\ Tech\ Tutorial/April\ 23/ Personal\ Exam\ 3
+	  	-Personal Exam, Blank, w:
+
+tail (-number of lines to print)(Path): Display (x) text lines from end, can be manipulated.
+    - See "head" for example, same concept. 
+	
+sort (-options)(Path): Sort results. Auto is alphabetically, use "man" to find more.
+
+nl (-options)(Path): Number lines once displayed. Use "man" to find more.
+
+nl -s '(x)' -w (x) (Path): Number lines once displayed, with rules.
+    - -s: What would be printed after number. ie if "10. " was to be displayed, use '. '
+    - -w: What would be printed before number, ie if 3 spaces was desired, use "3"
+
+wc (x)(Path): Gives word count of document. It displays as: lines, words, characters. 
+    -To get lines, type -l as a replacement for (x)
+    -To get word, type -w as a replacement for (x)
+    -To get characters, type -m as a replacement for (x)
+    -Can be mixed, ie -wl
+
+cut -f(x) -d(x) (Path): Used to seperate columns from file. -f= Which column, -d= Space displayed 	between the columns. ie. if "-f 1,2 -d 'x'" was used, x would be what seperates the columns.
+
+sed 's/(x)/(x)/g' (Path): Search and replace. sed= Command, 's/(x)/(x)'= 'search/find x/replace x'	, g= Replace all, not just first line.
+
+itemsuniq (x) (Path): Find duplicates. Only finds duplicates if they are next to each other.
+
+	
+---------------------
+
+			        ---SHORTCUTS FOR LS---
+
+
+
+
+-a: Show hidden files
+-t: Time modified (sort)
+-T: Forces FULL time info in “-l” format
+-S: Size (Sort)
+-U: Time of file creation (sort)
+-h: Forces use of Gb, mb, kb, b
+(x)*: Find all results corresponding with (x), also displays contents
+[x-X]*: Find all results containing [x-X]
+[^x-X]*: Find all results without [x-X]
+?(x)*: Find all results with (x) as second letter.
+mv ./../*.??g ./../Images: Move all "*.??g" files in directory to "Images".
+*.???: Find all results with (.123), ie .mp3/.rar/etc.
+[[:upper:]]*: Find all results that start with uppercase
+[[:lower:]]*: Find all results that start with lowercase
+????(Can be any amount of question marks, as needed): Find words that contain (x) amount of letters.
+
+
+
+----------------------
+
+
+ 						           ---VI---
+
+
+
+
+vi: Text Edit. Can make a new file or select an existing one.
+       - In vi, press i to enter Insert mode for text input.
+       - esc to exit Insert mode
+       - :w to save and not quit
+       - ZZ to save and quit
+       - :q! to exit without a save (from last save point)
+       - :set nu: Add line numbers, very useful.
+
+       — MOVEMENT IN VI —
+       
+Movement
+
+       - Arrow: Move Cursor
+       - jkhl: Move cursor Down, Up, Left, Right
+       - $: End of line
+       - ^: Beginning of line
+       - (x)G: Move to (x) line. Capital G
+       - G: Last line
+       - w: Beginning of next word
+       - (x)w: Move forward (x) amount of words
+       - b: Beginning of previous word
+       - (x)b: Move back (x) words
+       - { \ }: Move forward (or backwards) 1 paragraph
+       
+Deleting
+
+       - x: Delete a character
+       - (x)x: Delete (x) amount of characters
+       - dd: Delete full current line
+       - d(x): d followed by a movement command (w, (x)w, etc) to delete up to that command. 	               (eg. d5w=delete 5 words)
+       - u: undo
+       - U: undo entire line
+
+Actions
+
+       - v: Select
+       - V: Select entire line
+       - d(following v): Cut
+       - y(following v): Copy
+       - y(x)w: Copy (x) words
+       - P: Paste before character
+       - p: Paste after character
+       - o: New line/alternatire to "i"
+
+Seeking
+
+       - :%s/(insert)/(insert): Find and replace
+       - /(insert): Search
+       - N/n: Browse through searches
+
+
+
+
+-------------------------
+
+
+
+
+			               ----PERMISSIONS----
+
+
+
+** DONT CHANGE TEXT FILES (Not Programs or Directories) TO EXECUTABLE. WILL TURN TO PROGRAM WHICH WILL NOT WORK.
+ 
+Every file has three groups of people.
+	Owner: A single user, usually who made the file but this can be granted to others.
+	Group: Every file belongs to a single group.
+	Others: Anybody else who is not in the group or the owner.
+
+
+File:
+r: Read, you may view the contents of the file.
+w: Write, you may change the contents of the file.
+x: Execute, you may run or execute the file if it's a program or script.
+
+Directory:
+r: Read that dir. (ie. Do an ls)
+w: Write on that dir. (ie. Make folders, files, etc)
+x: Ability to enter directory (ie. cd)
+
+
+========
+
+* First letter: File type, d = Directory, - = File
+* Next 3 letters: Owners Permissions
+* Next 3 letters: Groups Permissions
+* Next 3 letters: Others Permissions
+
+
+* ls -l: Shows long form list, permissions are first 10 characters. (kept Apr. 20, manage space)
+	ie.: ls -l ~/Desktop/Linux\ Tech\ Tutorial
+			drwxr-xr-x  4 meghanbrun  staff   128 21 Apr 21:01 April 20
+			-rw-r--r--  1 meghanbrun  staff  4480 24 Apr 19:28 Full List Of Terms
+
+
+* drwxr-xr-x: "d"= Directory, "rwr"= Read, write, executable(owner), 
+            "r-x"= Read, can't write, Execute(group), "r-x"= Read, can't write, execute(Others)
+
+* -rw-r--r--: "-"= File, "rw-"= Read, write, non ex.(owner), "r--"= Only read(Groups), 
+	    "r--"= Only read(Others)
+
+Chmod: Change permissions for a file or folder.
+    - Follow with (Person to change permissions for)(File's path) **Exclude brackets**
+		eg. chmod a+w ~/Desktop/Linux\ Tech\ Tutorial/ Full\ List\ Of\ Terms
+
+Can also be used to change multiple permissions at once.
+		eg. chmod go+w ~/Desktop/Linux\ Tech\ Tutorial/ Full\ List\ Of\ Terms
+ 
+	
+========
+
+Octal code can be used to change multiple things at once (Refer to table below).
+			eg. 751= All perm. (owner), Read & Execute (Group), Execute (Others)
+
+
+__________________________
+
+
+
+			       ----OCTAL TABLE (OCTAL TO BINARY)----
+
+In terms of permissions, think of (Binary) first number as Read, second as Write, third as Execute.
+		ei. 751 = rwx, r-x, --x
+
+
+0       000
+1	001
+2	010
+3	011
+4	100
+5	101
+6	110
+7	111
+
+750 & 755 are commonly used.
+751 is also useful, but 750 may be safer as it leaves out "Execute" rights for "Others".
+
+ls -ld: Instead of listing contents of directory, it will simply show permissions.
+
+
+
+
+
+-------------------------
+
+				----PIPING AND REDIRECTION----
+
+Every program ran on a device has 3 data "streams" connected to it:
+
+STDIN: Input, what the user enters. 
+STDOUT: Output, what the program returns based on entry.
+STDERR: Error message, somethin ain't addin up.
+
+>: Tells program to forward output to a saved file instead of to the print box(terminal).
+- You don't need to tell the terminal to make a file for >, it will create one itself.
+- In the same way that a new file will be created, if any data is left in one that already exists that data
+  will be wiped to make room for new data.
+
+>>: This is to prevent data from an existing file from being wiped with >. Using >> tells the terminal to add
+    to the existing files' text.
+
+<: Opposite of >, this tells the program to take data from the file (as opposed to putting data in the file
+   from the program). 
+
+2>: Error message forwarding, will create file if nonexistant.
+
+These can be combined:
+(x) (-x) < [File Path] > [File Path]
+
+"|" is the sign for "piping", ie combining commands. For example, ls | head -3 | tail -1 would give the first three results on the page originally, then combined with "tail" would further reduce that to the last result. If tail had been tail -3 it would've given last three results, ie original head inquiry.
+
+Can identify all files in a directory with write permission (for example).: ls -l ~ | grep '^.....w'
+
+List every user who owns a file in (x) directory, including how many files/directories they own.: 
+ls -l /Linux... | tail -n +2 | sed 's/\s\s*/g' | cut -d ' ' -f 3 | sort | uniq -c
+	- sed: 
+
+
+
+
+
+------------------------
+
+
+ 					---- Git ----
+
+git config: Configure git profile.
+--global: Apply to all repositories.
+--local: Apply to local repositories.
+
+EXAMPLE: git config --global user.name "Louis Yacksmith" = changing username to Louis Yacksmith for anything sent to github.
+	 git config --global user.email "louisyscarleton@gmail.com" = Change email to louisyscarleton@gmail.com for all files sent to github.
+
+Check if this worked: git config user.name  ---> displays Louis Yacksmith
+
+git clone: Clone to local computer
+
+git status: Find status of git server
+
+git add: add changes, follow by file (ex. git add index.html)
+
+git commit: Always combine with -m (message), followed by "message here". Commits changes
+
+git push: Pushes changes to page to finalize website.
+
+echo "Insert Words": Tells git that this is the name of a file.
+
+echo "Insert Words" | git hash-object --stdin: Get the hash of a word. Used for GIT.
+
+echo "Insert Words" | git hash-object --stdin -w: Send the hash (individual file's ID, in a way) to the GIT Repo. Must have the GIT repo associated with the file for this to work.
+
+
+git init: Create an empty git directory on computer.
+		- Use before command above to save the file into directory.
+		- To ensure file is there, open .git folder (hidden) / objects / **. The ** will be the first two letters of the file's hash, the rest within file are the remainder of hash.
+
+git cat-file (insert hash): Use with argument to get specifics about file (See MAN, argument ex. -t = type) 
+
+blob: Content of a file in git
+
+tree: Directory in git
+
+git count-objects: Counts how many objects are in a database. IE, if a file is changed and then the modified file is uploaded to git, this will show the original files + modified.
+
+git checkout **name of tree**: Changes head branch to the tree that's specified.
+
+git merge **name of tree**: Merge changes with master branch
+
+git rebase **branch name**: This reorganizes the branch order. Like merge, but it places the branch ahead of master instead of alongside it. This is what it does in essence, although due to directories being stationary it actually just copies the branch so that it goes before the target (usually master) branch.
+
+
+
+
+
+
+-------------------------
+
+	             			-------HTML-------
+
+//: A line of code that does not affect the code itself. Invaluable for organization, this is used to make notes in a piece of code.
+
+title: Defines title of page
+
+head, body: Defines the structure of webpage. head is for invisible matter, body is for physical.
+
+h1,2,3,4,5,6: Level of heading. h1 would appear first, 2 second, etc.
+
+p: Paragraphs
+
+strong, em: Bold or italicize
+
+br: Create a break, or empty block, of text.
+
+img: Display images on a page.
+
+a: Used to create links to the same, or other, webpages. ie: <a href="Website url" >"website name"</a>
+
+Add target="_blank" to have link open in new tab.: <a href="Website url" target="_blank">"website name"</a></p>
+
+ul, ol, li: Unordered list, ordered list, list items.
+
+width, height: Determines w and h of img. Use alongside "alt:"" 
+
+<div style="background-image:url('[image url]');"> :  Copy/paste in "body" for background.
+
+<h1 style="text-align:center">[insert text here]</h1>: Use this command to center text. Used for title, as example. (h1 is a variable)
+
+<link rel="icon" type="image/png" href="insert url"/>: To make a favicon
+
+class= : Allows specific areas of HTML code to be customized.
+
+lang= "en-ca">: Select Language (english, in the case) 
+
+<a>= For links, this refers to "anchor". Include url inside first <a>.
+
+If <a> is wrapped in <strong>, it will be bold. Applies to <p>, etc as well.
+
+alt: : This is for the impaired. Ie, if an image has spongebob, write "alt: spongebob" and it will read "spongebob".
+
+iterm2= 
+
+-------------------------
+
+				    --------CSS-------
+
+     ***   RESOURCE FOR CODE HELP: http://www.w3schools.com/css/   ***
+
+
+- Described in Module 5 as "the fat, skin, and pinstriped suit" of html if html is "the skeleton".
+
+- Used to bring a nicer aesthetic to a webpage.
+
+- It works by hooking onto specific elements of an HTML page and formatting them using any number of options (called styles).
+
+- Can manipulate font sizes, background, text colours, etc.
+
+- "Classes" (along with "IDs") (class= in VS Code)  offer us a method to style specific or multiple HTML elements using the same CSS.
+
+- To change the properties of an entire class, start with "." and then follow with class name. 
+
+
+-------------------------
+
+                	            ----CODE CSS----
+
+<link rel="x" type="x" href="link to css file">: Links a .css file when put in between the headers of a html file. 
+
+font-weight: Boldness
+
+font-size: Font size
+
+text-align: Where the text goes on the page (centered)
+
+color: Define color of text
+
+font-family: Change font
+
+<p id="para1">: Isolating this paragraph as "paragraph 1".
+
+.(Name of class): Assign attributes to an entire class.
+
+border: Create a border.
+	-solid
+	-dashed
+	-inset
+	-dotted
+
+border-style: For fields of text, etc.
+
+
+(x)px: Used to define the specifics of a command. ie. font-size: 30px is bigger than 10px
+
+
+------------------------
+
+
+				  ----JAVASCRIPT----
+
+idocument.getElementById: This is simply a reference to the button to say, "If you ever click this button with an id that matches, do something".
+		-These id's (e.g., shrinkBtn, growBtn, and resetBtn) correlate with the id's of the buttons in the HTML.
+
+
+addEventListener(click): This code effectively means that we'll be watchingfor any clicks on our targeted button.
+
+function: Targets the "box" id and restyles the height to an arbitrary pixel size. In a way, we're using javascript to dynamically change the CSS of our box in response to the button clicks.
+
+var: Variable, declares an item is a variable.
+
+if/else: Represents a "conditional". See "Programming Logic".
+
+for-loops/while loops: Used to code an "iteration". See "Programming Logic"
+
+
+------------------------
+
+		             --STYLE OBJECT PROPERTIES (JAVA)--
+	
+
+alignContent: Sets or returns the alignment between the lines inside a flexible container when the items do not use all available space.
+
+alignItems: Sets or returns the alignment for items inside a flexible container
+
+alignSelf: Sets or returns the alignment for selected items inside a flexible container.
+
+        [https://www.w3schools.com/jsref/dom_obj_style.asp]
+
+animation: A shorthand property for all the animation properties below (see above link), except the animationPlayState property.
+
+background: Sets or returns all the background properties in one declaration. (see above link).
+
+border: Sets or returns borderWidth, borderStyle, and borderColor in one declaration.
+
+<button onclick="myFunction()">Click me</button> : Creates a button that says "Click me". When paired with*:
+--
+
+<p id="demo"></p>
+ 
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+
+---
+*That button displays "Hello World".
+
+---
+
+<script type="text/javascript" src=file name"></script>: Link a .js file to an html file
+
+---
+
+document.getElementById(id of button).addEventListener("click", function(){
+	document.getElementById(id of thing to be changed).style.(x) = "x" : *   
+
+* First line says what the button should listen for, in this case a "click". Second line says what thing should be listening for it and what will happen to it when it hears the "click".
+
+---
+
+opacity: To change fade of subject.
+
+---
+
+document.getElementById("button1").addEventListener("click", function    (){
+ 
+             document.getElementById("box").style.height = "300px";
+             document.getElementById("box").style.width = "300px";       }); :*
+
+* Tells html file to: Find line of code with id "button1", tells that button to listen for a "click". Once it hears the "click", the fuction of it is to configure object with id "box". That box, once this button is clicked, is told to increase "height" and "width" style attributes to "300px".
+ 
+---
+
+----------------------------------
+
+
+			`				----PROGRAMMING LOGIC----
+
+*** SEE "SCHOOL STUFF/SCREENSHOTS/PBJ FOR EXAMPLE CODE ***
+
+Programming haas to be done with the mentality that the computer is incredibly dumb. For example:
+
+Making a PB&J:
+
+1. Get two slices of bread, peanut butter, and jelly.
+2. Get utensils and a plate.
+3. Slather peanut butter and jelly on each slice of bread.
+4. Put the two slices of bread together.
+
+This looks fine to us, but for a computer to understand we would have to break it down further, like this:
+
+How many times do you slather?
+In what What direction do you slather?
+What amount do you slather?
+What utensil do you use to slather?
+Which slice of bread do you slather first?
+
+Basically, make sure to break things down BIG TIME.
+
+    --Terms--
+
+- Variables: The items in a procedure. They can by physical things (ie ingredients) or abstractions (ie counter). 
+- Arrays: Groups of related items, ie. variables. it presents another way to store and reference like pieces of info.
+- Conditionals: These present a way to control the flow of logic based on certain conditions being met.
+- Iterations/"Loops": The concept of using loops to perform a group of tasks repeatedly for a number of times. 
+- Functions: A sort of "sub-process(es)". They allow us to create pre-made, re-usable blocks of code which can be called on demand.These are run "asychronously" (not at the same time) in JAVA.
+
+------------------------------------
+
+
+	       						---DEBUGGING---
+Resources:
+"The Art of Debugging"
+https://remysharp.com/2015/10/14/the-art-of-debugging
+
+"Do you spend more time coding or debugging" Forum
+https://news.ycombinator.com/item?id=11729806
+
+"Getting started with google debugger"
+https://developers.google.com/web/tools/chrome-devtools/?hl=en
+
+"Stack Overflow"
+https://stackoverflow.com/
+
+
+
+	== TIPS ==
+
+- Replicate translation (see the bug), Isolate Translation (understand the bug), Eliminate Translation (fix the bug)
+- Start small. If a bug is found do not restart the code or give up, find the most relatable section to the problem and begin there. 
+- Check capitalization, parentheses, if it's saved, syntax, how things are named, other locations the problem could have occured from, if I'm looking at the right file, etc.
+- Reference working code. It's not cheating if you use old/others' code, that's what being a dev is. Go back to old code I've written and compare new bugged code with working example.
+- Keep code clean. Don't jumble everything together in one line, use multiple lines and describe them by using "//". See "HTML" for "//".
+- Use google debugger. Very useful tool to help spot code that doesn't look right.
+		
+	-EXAMPLE/BREAKDOWN OF GOOGLE DEBUGGER WORKING-
+
+
+** Initial Code
+	--
+var myName = "Sam";
+var favFood = "Green Eggs and Ham";
+
+alert(myName + " loves " + favfood);
+	--
+
+
+** Google Debugger Prompt
+	--
+quick.html:3 Uncaught ReferenceError: favfood is not defined
+	--
+
+
+** Breakdown of Debugger
+	--
+quick.html:3 : The program *thinks* the error is on line 3. Not always precise when dealing with complex code.
+
+Uncaught ReferenceError: Letting us know that there is an error in our reference.
+
+favfood is not defined: This is the reference with the error. If you compare the "alert" code with the "var", or "variables" code, you can see that the alert has a lowercase "f" for favfood while the code has uppercase.
+	--
+
+	       	-END OF BREAKDOWN/EXAMPLE-
+
+- Test often. Do not just write out a big wall of code right off the bat, ensure after each change you test it in a browser, save, correct and bugs, and then move on. This will prevent an overwhelming end results in terms of bugs.
+- Get help. Whether it's through a tutor, online community, old code, or peers, there is no shame in asking for some help.
+- Practice. A lot.
+- Remember that everybody has a different setup. If an error code is appearing for a client, ensure extensions, disabled cookies, etc are accounted for.
+- 
+
+      == END OF TIPS ==
+
+
+
+

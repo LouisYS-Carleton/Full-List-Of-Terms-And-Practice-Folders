@@ -1,0 +1,386 @@
+STUDYING:
+--------------------
+ 
+Directory: Folder, series of folders
+
+Absolute path: a file or directory in relation to the root of the file system
+
+Relative path: A file or directory corresponding to the current location
+
+/etc: List of system files, good to mess around with for searching tests.
+
+Root User: Full control over entire system. "superuser"
+
+Owner: Person who made file or directory.
+
+Filter: Takes data in whatever context given, displaying it in a certain way.
+
+---------------------
+			      ---MOVEMENT SHORTCUTS---
+
+ctrl a: Move to beginning of command line.
+
+ctrl e: Move to end of command line.
+
+ctrl l: Clear screen (Also can say "clear")
+
+ctrl -: Undo
+
+ctrl k: Cut until end of line.
+
+ctrl y: Paste
+---------------------
+				---GENERAL TERMS---
+
+top: List of programs/processes that are currently running.
+
+ps: List of processes running in terminal
+
+ps aux: List of processes for entire system. Use grep (See EGREP).
+	- Can be used to find process ID. "grep" search a file (ie grep 'Safari') it will be # next to user.
+
+kill [signal] <Process ID>: Used to kill a program. (ignore brackets and stuff)
+	- [signal]: A way of placing importance of the task, in a way. Can (and should) be run without 
+	anything here, however if the program still won't close imput a -9. This'll shut shit down.
+
+	- <Process ID>: Can be found next to username after ps aux is used.
+
+job: List current jobs running in background
+
+fg <job number>: Move a background process to the foreground.
+
+ctrl + z: Move a foreground process to the background (pauses process in the meantime).
+
+Pwd: Current location (User profile)
+
+Ls: list of what’s there (folders, etc)
+
+Cd: Change directory (current directory)
+
+File [File name (direct to file through directories): Shows type (jpeg, mp4, etc) a file is. Linux does not show this.
+
+Man: USEFUL feature to help keep track of what shortcuts can do. Use when specific desired action is unknown.
+
+Mkdir: Make a directory 
+     - -p: Make parent directories as needed     
+     - -v: Displays what happened with mkdir    
+
+Rmdir: Remove a directory
+     - -p Removes all EMPTY directories in path *DANGER*
+
+Rm: Remove file *DANGER*
+     - -r Remove directory containing files.
+     - -i Always use with -r, Gives option to review files 
+
+Touch: While in cd, can be used to create blank document
+
+Cp: Copy file. (cp [Directory path] [Original] [New]) (MAN)
+     - -p: Copy entire file, time and all
+
+Mv: Move a file, can also change file name upon move.
+     - Mv can also be used to rename file, select same original dir.
+
+Cat: View the file, used to join files together at a mode advanced level. If used with no file will just mirror text input that follows, use CTRL + C to get out of this.
+
+Tac: Reverse cat search. Displays results last to first.
+
+Less: Similar to cat, but better for long strings of text as you can scroll through. Spacebar goes up a page, b goes back       a page. Q to quit (or ZZ).
+
+Ctrl + C: Cancel (Universal for linux)
+
+Chmod: Change permissions for a file or folder.
+    - Follow with (Person to change permissions for)(File's path) **Exclude brackets**
+		eg. chmod a+w ~/Desktop/Linux\ Tech\ Tutorial/ Full\ List\ Of\ Terms
+
+sudo: Enable "superuser" priviledges. Can be used to look at root user files. *DANGER*
+
+open: Open a file.
+
+--------------------
+			         ----EGREP COMMANDS----
+
+EGREP: ONLY PRINTS LINES WITH SPECIFIED PARAMETERS. CHECK MAN PAGE
+egrep [command line option] 'x' [Path]
+
+
+. (dot) - a single character.
+? - the preceding character matches 0 or 1 times only.
+* - the preceding character matches 0 or more times.
++ - the preceding character matches 1 or more times.
+{n} - the preceding character matches exactly n times.
+{n,m} - the preceding character matches at least n times and not more than m times.
+[agd] - the character is one of those included within the square brackets.
+[^agd] - the character is not one of those included within the square brackets.
+[c-f] - the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.
+() - allows us to group several characters to behave as one.
+| (pipe symbol) - the logical OR operation.
+^ - matches the beginning of the line.
+$ - matches the end of the line.
+
+
+
+egrep -n= Display which line they're on
+
+egrep -c= Only displays how many lines contain it.
+https://www.debuggex.com/ :   Help source!
+
+Any line with 2 as the non final character: egrep '2.+' [Path]
+
+Any line with 2 as final character: egrep '2$' [Path]
+
+Each line with I, go, now: egrep 'I|go|now' [Path]
+
+Every result between Q-Z: egrep '^[Q-Z]' [Path]
+
+Every result with 2 or more vowels: egrep '[aeiou]{2,}'  ----> {2,} Is saying how many vowels it 
+                                    must contain in a row.
+
+
+
+
+--------------------
+		              ---TEXT FILE MANIPULATION---
+
+
+head (-number of lines to print)(Path): Dsiplay (x) text lines from beginning, can be manipulated. 
+    - ie: head -3 ~/Desktop/Linux\ Tech\ Tutorial/April\ 23/ Personal\ Exam\ 3
+	  	-Personal Exam, Blank, w:
+
+tail (-number of lines to print)(Path): Display (x) text lines from end, can be manipulated.
+    - See "head" for example, same concept. 
+	
+sort (-options)(Path): Sort results. Auto is alphabetically, use "man" to find more.
+
+nl (-options)(Path): Number lines once displayed. Use "man" to find more.
+
+nl -s '(x)' -w (x) (Path): Number lines once displayed, with rules.
+    - -s: What would be printed after number. ie if "10. " was to be displayed, use '. '
+    - -w: What would be printed before number, ie if 3 spaces was desired, use "3"
+
+wc (x)(Path): Gives word count of document. It displays as: lines, words, characters. 
+    -To get lines, type -l as a replacement for (x)
+    -To get word, type -w as a replacement for (x)
+    -To get characters, type -m as a replacement for (x)
+    -Can be mixed, ie -wl
+
+cut -f(x) -d(x) (Path): Used to seperate columns from file. -f= Which column, -d= Space displayed 	between the columns. ie. if "-f 1,2 -d 'x'" was used, x would be what seperates the columns.
+
+sed 's/(x)/(x)/g' (Path): Search and replace. sed= Command, 's/(x)/(x)'= 'search/find x/replace x'	, g= Replace all, not just first line.
+
+uniq (x) (Path): Find duplicates. Only finds duplicates if they are next to each other.
+
+	
+---------------------
+
+			        ---SHORTCUTS FOR LS---
+
+
+
+
+-a: Show hidden files
+-t: Time modified (sort)
+-T: Forces FULL time info in “-l” format
+-S: Size (Sort)
+-U: Time of file creation (sort)
+-h: Forces use of Gb, mb, kb, b
+(x)*: Find all results corresponding with (x), also displays contents
+[x-X]*: Find all results containing [x-X]
+[^x-X]*: Find all results without [x-X]
+?(x)*: Find all results with (x) as second letter.
+mv ./../*.??g ./../Images: Move all "*.??g" files in directory to "Images".
+*.???: Find all results with (.123), ie .mp3/.rar/etc.
+[[:upper:]]*: Find all results that start with uppercase
+[[:lower:]]*: Find all results that start with lowercase
+????(Can be any amount of question marks, as needed): Find words that contain (x) amount of letters.
+
+
+
+----------------------
+
+			             ---VI---
+
+
+
+
+vi: Text Edit. Can make a new file or select an existing one.
+       - In vi, press i to enter Insert mode for text input.
+       - esc to exit Insert mode
+       - :w to save and not quit
+       - ZZ to save and quit
+       - :q! to exit without a save (from last save point)
+       - :set nu: Add line numbers, very useful.
+
+       ——MOVEMENT IN VI——
+       
+Movement
+
+       - Arrow: Move Cursor
+       - jkhl: Move cursor Down, Up, Left, Right
+       - $: End of line
+       - ^: Beginning of line
+       - (x)G: Move to (x) line. Capital G
+       - G: Last line
+       - w: Beginning of next word
+       - (x)w: Move forward (x) amount of words
+       - b: Beginning of previous word
+       - (x)b: Move back (x) words
+       - { \ }: Move forward (or backwards) 1 paragraph
+       
+Deleting
+
+       - x: Delete a character
+       - (x)x: Delete (x) amount of characters
+       - dd: Delete full current line
+       - d(x): d followed by a movement command (w, (x)w, etc) to delete up to that command. 	               (eg. d5w=delete 5 words)
+       - u: undo
+       - U: undo entire line
+
+Actions
+
+       - v: Select
+       - V: Select entire line
+       - d(following v): Cut
+       - y(following v): Copy
+       - y(x)w: Copy (x) words
+       - P: Paste before character
+       - p: Paste after character
+       - o: New line/alternatire to "i"
+
+Seeking
+
+       - :%s/(insert)/(insert): Find and replace
+       - /(insert): Search
+       - N/n: Browse through searches
+
+
+
+
+-------------------------
+
+
+
+
+			               ----PERMISSIONS----
+
+
+
+** DONT CHANGE TEXT FILES (Not Programs or Directories) TO EXECUTABLE. WILL TURN TO PROGRAM WHICH WILL NOT WORK.
+ 
+Every file has three groups of people.
+	Owner: A single user, usually who made the file but this can be granted to others.
+	Group: Every file belongs to a single group.
+	Others: Anybody else who is not in the group or the owner.
+
+
+File:
+r: Read, you may view the contents of the file.
+w: Write, you may change the contents of the file.
+x: Execute, you may run or execute the file if it's a program or script.
+
+Directory:
+r: Read that dir. (ie. Do an ls)
+w: Write on that dir. (ie. Make folders, files, etc)
+x: Ability to enter directory (ie. cd)
+
+
+========
+
+* First letter: File type, d = Directory, - = File
+* Next 3 letters: Owners Permissions
+* Next 3 letters: Groups Permissions
+* Next 3 letters: Others Permissions
+
+
+* ls -l: Shows long form list, permissions are first 10 characters. (kept Apr. 20, manage space)
+	ie.: ls -l ~/Desktop/Linux\ Tech\ Tutorial
+			drwxr-xr-x  4 meghanbrun  staff   128 21 Apr 21:01 April 20
+			-rw-r--r--  1 meghanbrun  staff  4480 24 Apr 19:28 Full List Of Terms
+
+
+* drwxr-xr-x: "d"= Directory, "rwr"= Read, write, executable(owner), 
+            "r-x"= Read, can't write, Execute(group), "r-x"= Read, can't write, execute(Others)
+
+* -rw-r--r--: "-"= File, "rw-"= Read, write, non ex.(owner), "r--"= Only read(Groups), 
+	    "r--"= Only read(Others)
+
+Chmod: Change permissions for a file or folder.
+    - Follow with (Person to change permissions for)(File's path) **Exclude brackets**
+		eg. chmod a+w ~/Desktop/Linux\ Tech\ Tutorial/ Full\ List\ Of\ Terms
+
+Can also be used to change multiple permissions at once.
+		eg. chmod go+w ~/Desktop/Linux\ Tech\ Tutorial/ Full\ List\ Of\ Terms
+ 
+	
+========
+
+Octal code can be used to change multiple things at once (Refer to table below).
+			eg. 751= All perm. (owner), Read & Execute (Group), Execute (Others)
+
+
+__________________________
+
+
+
+
+
+
+			       ----OCTAL TABLE (OCTAL TO BINARY)----
+
+In terms of permissions, think of (Binary) first number as Read, second as Write, third as Execute.
+		ei. 751 = rwx, r-x, --x
+
+
+0       000
+1	001
+2	010
+3	011
+4	100
+5	101
+6	110
+7	111
+
+750 & 755 are commonly used.
+751 is also useful, but 750 may be safer as it leaves out "Execute" rights for "Others".
+
+ls -ld: Instead of listing contents of directory, it will simply show permissions.
+
+
+
+
+
+-------------------------
+
+				----PIPING AND REDIRECTION----
+
+Every program ran on a device has 3 data "streams" connected to it:
+
+STDIN: Input, what the user enters. 
+STDOUT: Output, what the program returns based on entry.
+STDERR: Error message, somethin ain't addin up.
+
+>: Tells program to forward output to a saved file instead of to the print box(terminal).
+- You don't need to tell the terminal to make a file for >, it will create one itself.
+- In the same way that a new file will be created, if any data is left in one that already exists that data
+  will be wiped to make room for new data.
+
+>>: This is to prevent data from an existing file from being wiped with >. Using >> tells the terminal to add
+    to the existing files' text.
+
+<: Opposite of >, this tells the program to take data from the file (as opposed to putting data in the file
+   from the program). 
+
+2>: Error message forwarding, will create file if nonexistant.
+
+These can be combined:
+(x) (-x) < [File Path] > [File Path]
+
+"|" is the sign for "piping", ie combining commands. For example, ls | head -3 | tail -1 would give the first three results on the page originally, then combined with "tail" would further reduce that to the last result. If tail had been tail -3 it would've given last three results, ie original head inquiry.
+
+Can identify all files in a directory with write permission (for example).: ls -l ~ | grep '^.....w'
+
+List every user who owns a file in (x) directory, including how many files/directories they own.: 
+ls -l /Linux... | tail -n +2 | sed 's/\s\s*/g' | cut -d ' ' -f 3 | sort | uniq -c
+	- sed: 
+
+-------------------------
+-------------------------

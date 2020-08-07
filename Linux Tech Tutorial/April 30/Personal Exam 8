@@ -1,0 +1,115 @@
+Personal Exam:
+
+w: Move forward 1 word
+b: Move backwards 1 word
+(x)b: Move backwards x amount of words
+(x)G: Move to x line
+{}: Move forward/backwards 1 paragraph
+u: Undo
+U: Full line undo
+dd: Delete entire line
+x: delete character
+d(x): Delete (insert movement command)
+hjkl: Left, down, up, right
+$: Move to end of line
+^: Move to beginning of line
+G: Move to end of text
+(x)x: delete x amount of characters
+:set nu: Number text file lines
+less: Show navigatable text
+ZZ: Save and quit
+cat: Display non navigatable text
+:w: Save
+:q!: Quit
+v: Select
+V: Select all
+d(after v): Cut
+y(after v): Copy	
+P: Paste before character
+p: Paste after character
+yw: Copy until x word
+:%s/(insert)/(insert): Search and replace
+/(insert): Search
+?/(insert): Search
+n/N(after /()or?()): Navigate search results
+(x)*: Find all results beginning with (x)
+?(x)*: Find all results with second letter (x)
+*[x-X]: Find all results between x-X
+*[^x-X]: Find all results excluding x-X
+*.???: Find all 3 letter extension results
+????: Find 4 letter results
+[[:upper:]]*: Find uppercase results
+[[:lower:]]*: Find lowercase results
+Ctrl + c: Universal cancel command
+mv ./../*.??g ./../Images: Move all .??g files to Images
+
+
+Permissions
+r: Read
+w: Write
+x: Execute
+chmod (x+x)(x): Change permissions for users
+U...: User
+G....: Group
+O.....: Others
+A..: All
+-r--r---wx:file, U&G= Read, O= Write and Execute
+chmod (xx+x)(x)= Change permissions for multiple users
+713(Permissions): All, Execute, Write/Execute
+ls -ld: Show permissions for directory, not contents
+
+How many numbers does octal, binary, decimal have?: 8, 1, 10
+
+Root User vs Owner: Root= Main admin, Owner= Who created file, dir.
+
+Filter: A program that takes variable data and compiles in certain way.
+
+sudo: Superuser command
+
+open: Open a file
+
+head(-x)(x): Display text file front to back
+
+tail(-x)(x): Display text file back to front
+
+sort(-x)(x): Sort a text file according to command
+
+ctrl a: move to beginning of command line
+
+ctrl e: move to end of command line
+
+** ctrl l: Clear
+
+** ctrl k: Cut entire command line
+
+** ctrl y: Paste entire command line
+
+nl (-x)(x): Number lines of text file
+
+nl -s '(x)' -w (x) (Path): Number lines of a text file
+         -s(x): What appears after number 
+	 -w(x): What appears before number
+
+** wc (x)(Path): Word count command
+	-w: Words
+	-l: Lines
+	** -m: Characters
+	-mw: Display characters and words
+
+** cut -f(x) -d(x) (Path): Display individual columns. f= which column, d= what seperates columns
+
+sed 's/(x)/(x)/g' (Path): Search and replace. g=Search entire text
+
+** uniq (x) (Path): Delete duplicate lines, only works when back to back.
+
+tac (Path): Reverse of cat
+
+egrep: Search through file
+
+egrep -n: Display which line they're on
+      -c: Display how many lines contain it
+      '2.+': Any line with non final character 2
+      '2$': Things that end with 2
+      '^[A-P]': Things between A-P
+      '[aeiou]{2,}': All vowel results, 2 or more in a row.
+      'or|I|poo': All results with or/i/poo

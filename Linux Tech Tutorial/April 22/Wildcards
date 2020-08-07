@@ -1,0 +1,5 @@
+Wildcards
+
+
+*= search for name that starts with (x). Example (cd Linux...) ls A*= April 20, 21, 22, 23, etc
+*= Also displays contents of directories that it pulls up.
