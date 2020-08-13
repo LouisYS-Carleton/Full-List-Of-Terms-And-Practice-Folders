@@ -7,23 +7,23 @@
 				---INDEX (ROUGH, NOT EXACT)---
 
 
-Movement Shortcuts: 38
-General Terms: 52
-EGREP: 130
-Text File Manipulation: 170
-Shortcuts for LS: 207
-VI: 233
-Permissions: 298
-Octal Table: 360
-Piping And Redirection: 385
-GIT: 421
-HTML: 446
-CSS: 483
-CSS CODE: 503
-JAVA: 537
-Style Object Properties (JAVA): 549
-Programming Logic: 612
-Debugging: 661
+Movement Shortcuts: 71
+General Terms: 86
+EGREP: 164
+Text File Manipulation: 206
+Shortcuts for LS: 239
+VI: 265
+Permissions: 328
+Octal Table: 389
+Piping And Redirection: 415
+GIT: 454
+HTML: 507
+CSS: 553
+CSS CODE: 573
+JAVASCRIPT: 614
+Style Object Properties (JS): 633
+Programming Logic: 692
+Debugging: 726
 
 
 --------------------
@@ -630,7 +630,7 @@ for-loops/while loops: Used to code an "iteration". See "Programming Logic"
 
 ------------------------
 
-		             --STYLE OBJECT PROPERTIES (JAVA)--
+		             --STYLE OBJECT PROPERTIES (JS)--
 	
 
 alignContent: Sets or returns the alignment between the lines inside a flexible container when the items do not use all available space.
