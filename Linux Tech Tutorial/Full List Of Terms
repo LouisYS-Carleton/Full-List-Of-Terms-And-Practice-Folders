@@ -606,6 +606,9 @@ border: Create a border.
 
 border-style: For fields of text, etc.
 
+margin: Adds spacing between elements. Useful to separate text from borders, images, etc.
+
+padding: Space between border and content.
 
 (x)px: Used to define the specifics of a command. ie. font-size: 30px is bigger than 10px
 
@@ -622,6 +625,8 @@ overflow: Used to tell HTML what to do when text overflows box.
 (id/class/element):active : Used to select and style the active link. IE, A link coinciding with this can be set to turn colours when clicked. 
 
 (id/class/element):focus : Used to select the element that has focus. IE, A search bar could be told to turn yellow when clicked.
+
+
 ------------------------
 
 
