@@ -548,6 +548,16 @@ alt: : This is for the impaired. Ie, if an image has spongebob, write "alt: spon
 https://github.com/LouisYS-Carleton/Full-List-Of-Terms-And-Practice-Folders/tree/master/Linux%20Tech%20Tutorial
 iterm2= Useful software that is an alternative to terminal. 
 
+<link ref="stylesheet" href="*Document to link*"></link>: Apply a CSS file to the html file.
+
+<meta name="Description" content="*Insert web desc.*">: Assign a description of webpage for search engines.
+
+id: Used to assign an id, or a name of sorts, to an element. See "Code CSS" desc. as well.
+
+class: Assign an "id", but to multiple items. See "Code CSS" desc. as well.
+
+ 
+
 -------------------------
 
 				    --------CSS-------
