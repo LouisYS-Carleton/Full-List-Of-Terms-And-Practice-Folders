@@ -65,7 +65,7 @@ Trees: Basically a directory in GIT
 
 Tags: 
 
-
+Google Fonts: Useful for @import ing fonts to a CSS File.
 --------------------- 
 ---------------------
 			      ---MOVEMENT SHORTCUTS---
@@ -545,7 +545,7 @@ lang= "en-ca">: Select Language (english, in the case)
 If <a> is wrapped in <strong>, it will be bold. Applies to <p>, etc as well.
 
 alt: : This is for the impaired. Ie, if an image has spongebob, write "alt: spongebob" and it will read "spongebob".
-
+https://github.com/LouisYS-Carleton/Full-List-Of-Terms-And-Practice-Folders/tree/master/Linux%20Tech%20Tutorial
 iterm2= Useful software that is an alternative to terminal. 
 
 -------------------------
@@ -606,6 +606,12 @@ overflow: Used to tell HTML what to do when text overflows box.
 	- auto: If overflow is clipped, a scroll-bar should be added to see the rest of the content	
 	- initial: Sets this property to its default value.
 	- inherit: Inherits this property from its parent element.i
+
+(id/class):hover : Highlights selected color while hovering over link. IE, A link can be set to turn yellow when the cursor hovers over it.
+
+(id/class):active : Used to select and style the active link. IE, A link coinciding with this can be set to turn colours when clicked. 
+
+(id/class):focus : Used to select the element that has focus. IE, if a search bar that coincides with this tag is clicked and the focus is set to change the background to yellow, then when clicked the search bar will turn yellow. 
 
 
 ------------------------
