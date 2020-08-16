@@ -556,6 +556,8 @@ id: Used to assign an id, or a name of sorts, to an element. See "Code CSS" desc
 
 class: Assign an "id", but to multiple items. See "Code CSS" desc. as well.
 
+div.*class name*: class name=col, col-6, row, etc. Used as shortcut to input a <div> class with the class inside.
+
  
 
 -------------------------
